@@ -36,9 +36,5 @@ object ResuourceTraining extends ZIOAppDefault {
     }}.orDie
   }
 
-  override def run: ZIO[Any with ZIOAppArgs with Scope, Any, Any] = {
-    writeData("text.txt", "text text text text\ntext text text text\ntext text text text")
-    val data = readData("text.txt")
-    ZIO.succeed(println(data))
-  }
+  override def run: ZIO[Any with ZIOAppArgs with Scope, Any, Any] = ZIO.succeed("Done")
 }
